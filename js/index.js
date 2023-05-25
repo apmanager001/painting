@@ -84,7 +84,8 @@ function startCountdownTimer() {
 
     if (distance < 0) {
       clearInterval(countdownClock);
-      document.getElementById("timer").innerHTML = "Time Expired";
+      document.getElementById("timer").innerHTML = "Times Up!";
+      disableColorChanges();
     }
   }, 1000);
 }
