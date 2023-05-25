@@ -126,8 +126,8 @@ body{
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(185, 1fr); /* Adjust the number of columns here */
-  grid-template-rows: repeat(75, 1fr); /* Adjust the number of rows here */
+  grid-template-columns: repeat(135, 1fr); /* Adjust the number of columns here */
+  grid-template-rows: repeat(60, 1fr); /* Adjust the number of rows here */
   gap: 0px; /* Adjust the gap between squares here */
   background-color: navy;
   padding: 2px;

@@ -59,7 +59,7 @@ function disableColorChanges() {
 function createGrid() {
   const grid = document.getElementById('grid');
 
-  for (let i = 0; i < 185 * 75; i++) {
+  for (let i = 0; i < 135 * 60; i++) {
     const square = document.createElement('div');
     square.className = 'square';
     square.id = i + 1;
