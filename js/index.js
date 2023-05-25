@@ -38,7 +38,7 @@ function changeColor(event) {
   square.dataset.colorIndex = nextColorIndex;
 
   const count = 20 - clickedSquares.size;
-  document.getElementById('counter').textContent = 'Count: ' + count;
+  document.getElementById('counter').textContent = 'Moves Left: ' + count;
 
   if (count <= 0) {
     // Perform necessary actions when count reaches 20
