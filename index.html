@@ -2,8 +2,19 @@
 <head>
     <title>Where Community Meets Art</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('rules-link').addEventListener('click', function(e) {
+          e.preventDefault();
+          var faqBox = document.querySelector('.rules');
+          if (faqBox.style.display === 'none' || faqBox.style.display === '') {
+            faqBox.style.display = 'block';
+          } else {
+            faqBox.style.display = 'none';
+          }
+        });
+      });
+    </script>
 </head>
 <body>
 
@@ -36,14 +47,29 @@
             </form>
           </div>
         </div>
-    </div></div>
+    </div>
+  </div>
+  <div class="right">
+  <a href="" id="rules-link">Rules</a>
+    <div class="rules">
+      <h2>Rules</h2>
+      <ol>
+        <li>Only one person can make changes to the board at a time.</li>
+        <li>You can only change the color of 20 squares per session, and you only ave 5 minutes.</li>
+        <li>Each person can only have 5 sessions per grid. Once the grid resets it refreshes previous sessions.</li>
+        
+      </ol>
+    </div>
+  </div>
 </div>
 
 <div class="container">
   <div class="grid" id="grid"></div>    
 </div>
 
-
+<div class="footer">
+  <a href="individual.html">Try your own</a>
+</div>
 
 <script src="js/index.js">
 </script>

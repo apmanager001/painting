@@ -17,6 +17,11 @@ body{
     align-items:center;
     justify-content: center;
 }
+.right {
+  display: flex;
+  align-items:center;
+  justify-content: right;
+}
 .title{
     display: flex;
     align-items:center;
@@ -119,10 +124,30 @@ body{
     cursor: pointer;
   }
 
+/* FAQ DropDown box*/
+.rules {
+  display: none;
+  background-color: white;
+  padding: 20px;
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  width: 25%;
+  z-index: 1;
+}
+
+#rules-link {
+    position: relative;
+    color: white;
+    font-size: 48px;
+    font-weight: 600;
+    text-decoration: none;
+    }
 /* the part of the page that is used, staging and shapes*/
 .container{
     padding: 30px 0 0 30px;
     display: flex;
+    margin-bottom: 5%;
 }
 .grid {
   display: grid;
@@ -157,4 +182,23 @@ body{
 
 .color5 {
   background-color: #ccc;
+}
+
+/* Footer*/
+
+.footer{
+  display:grid;
+ 
+  background-color: black;
+  font-weight: bold;
+  font-size: 48px;
+  color: white;
+  gap: 5px;
+  width: 100%;
+  height: 150px;
+}
+.footer a{
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
 }
