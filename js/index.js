@@ -21,6 +21,12 @@ usernameForm.addEventListener("submit", function(event) {
 });
 //end modal
 var clickedSquares = new Set();
+// set how many moves can be made
+const moves = 20
+// set grid number of Rows
+const totalRows = 135
+//set grid number of Columns
+const totalColumns = 60
 
 function changeColor(event) {
   const square = event.target;
@@ -37,11 +43,11 @@ function changeColor(event) {
   square.className = 'square ' + colors[nextColorIndex];
   square.dataset.colorIndex = nextColorIndex;
 
-  const count = 20 - clickedSquares.size;
+  const count = moves - clickedSquares.size;
   document.getElementById('counter').textContent = 'Moves Left: ' + count;
 
   if (count <= 0) {
-    // Perform necessary actions when count reaches 20
+    // Perform necessary actions when count reaches max moves
     document.getElementById('counter').textContent = 'Out of Moves';
     disableColorChanges();
   }
@@ -59,7 +65,7 @@ function disableColorChanges() {
 function createGrid() {
   const grid = document.getElementById('grid');
 
-  for (let i = 0; i < 135 * 60; i++) {
+  for (let i = 0; i < totalRows * totalColumns; i++) {
     const square = document.createElement('div');
     square.className = 'square';
     square.id = i + 1;

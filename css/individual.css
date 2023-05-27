@@ -63,8 +63,8 @@ body{
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(135, 1fr); /* Adjust the number of columns here */
-  grid-template-rows: repeat(60, 1fr); /* Adjust the number of rows here */
+  grid-template-columns: repeat(110, 1fr); /* Adjust the number of columns here */
+  grid-template-rows: repeat(50, 1fr); /* Adjust the number of rows here */
   gap: 0px; /* Adjust the gap between squares here */
   background-color: navy;
   padding: 2px;
@@ -73,8 +73,8 @@ body{
 .square {
   background-color: #ccc;
   border: 1px solid #777;
-  height: 8px;
-  width: 8px;
+  height: 10px;
+  width: 10px;
 }
 .color1 {
   background-color: #ff0000;
