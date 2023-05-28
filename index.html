@@ -4,16 +4,24 @@
     <link rel="stylesheet" href="css/style.css">
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('rules-link').addEventListener('click', function(e) {
-          e.preventDefault();
-          var faqBox = document.querySelector('.rules');
-          if (faqBox.style.display === 'none' || faqBox.style.display === '') {
-            faqBox.style.display = 'block';
-          } else {
-            faqBox.style.display = 'none';
-          }
-        });
-      });
+  var faqBox = document.querySelector('.rules');
+  var rulesLink = document.getElementById('rules-link');
+
+  rulesLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    if (faqBox.style.display === 'none' || faqBox.style.display === '') {
+      faqBox.style.display = 'block';
+    } else {
+      faqBox.style.display = 'none';
+    }
+  });
+
+  document.addEventListener('click', function(e) {
+    if (e.target !== rulesLink && !faqBox.contains(e.target) && faqBox.style.display === 'block') {
+      faqBox.style.display = 'none';
+    }
+  });
+});
     </script>
 </head>
 <body>
@@ -60,6 +68,7 @@
   <a href="" id="rules-link">Rules</a>
     <div class="rules">
       <h2>Rules</h2>
+     
       <ol>
         <li>Only one person can make changes to the board at a time.</li>
         <li>You can only change the color of 20 squares per session, and you only ave 5 minutes.</li>
