@@ -1,16 +1,11 @@
 <html>
 <head>
     <title>Where Community Meets Art</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="mobile.css">
     <script>
-    $(window).on('load resize',function(){
-        if($(window).width() < 450){
-            window.location = "https://www.google.com"
-        }
-      });
       document.addEventListener('DOMContentLoaded', function() {
-    var faqBox = document.querySelector('.rules');
-    var rulesLink = document.getElementById('rules-link');
+  var faqBox = document.querySelector('.rules');
+  var rulesLink = document.getElementById('rules-link');
 
   rulesLink.addEventListener('click', function(e) {
     e.preventDefault();
@@ -83,7 +78,7 @@
     </div>
 </div>
 
-<script src="js/index.js">
+<script src="mobile.js">
 </script>
 
 </body>
