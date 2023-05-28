@@ -33,16 +33,15 @@ blue #779ecc
     justify-content: center;
     color:#ffB347;
     height: 55px;
-    font-size: 48px;
+    font-size: 56px;
     font-weight: 600;
     padding: 5px;
   
 }
 .mid-header{
-  display: flex;
+    display: grid;
   align-items:center;
   justify-content: center;
-  padding: 5px;
 }
 .name{
     grid-column: 1/ 2;
@@ -91,7 +90,7 @@ blue #779ecc
     
     background-color: #E1AD01;
     border-radius: 15px;
-    font-size: large;
+    font-size: 46px;
     font-weight: 600;
 }
 
