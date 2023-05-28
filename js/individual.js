@@ -15,7 +15,7 @@ function changeColor(event) {
 function createGrid() {
   const grid = document.getElementById('grid');
 
-  for (let i = 0; i < 110 * 50; i++) {
+  for (let i = 0; i < 85 * 65; i++) {
     const square = document.createElement('div');
     square.className = 'square';
     square.id = i + 1;
