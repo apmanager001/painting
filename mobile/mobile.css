@@ -18,18 +18,22 @@ blue #779ecc
     
 }
 .header{
-  display: flex;
+  display: grid;
   align-items:center;
   justify-content: center;
-  padding: 15px;
+  grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
 }
 
 .title{
+    grid-column: 1/ 2;
+    grid-row: 1 /2;
     display: flex;
     align-items:center;
     justify-content: center;
     color:#ffB347;
-    font-size: 42px;
+    height: 55px;
+    font-size: 48px;
     font-weight: 600;
     padding: 5px;
   
@@ -41,38 +45,39 @@ blue #779ecc
   padding: 5px;
 }
 .name{
-  display: flex;
-  align-items:center;
-  justify-content: center;
-    min-height:55px;
-    width: 150px;
+    grid-column: 1/ 2;
+    grid-row: 2/3;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 55px;
     background-color: black;
     color: white;
     font-weight: 600;
-    
     text-align: center;
     font-size: 48px;
 }
 .moves{
-  display: flex;
-  align-items:center;
-  justify-content: center;
-  min-height:55px;
-  min-width: 350px;
+    grid-column: 1/ 2;
+    grid-row: 3 /4;
+    display: flex;
+    align-items:center;
+    justify-content: center;
     background-color: black;
+    height: 55px;
     color: white;
     font-weight: 600;
-    
     text-align: center;
     font-size: 48px;
 }
 
 .clock {
-  display: flex;
-  align-items:center;
-  justify-content: center;
-    min-height:55px;
-    min-width: 180px;
+    grid-column: 1/ 2;
+    grid-row: 4 /5;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 55px;
     background-color: black;
     color: white;
     font-weight: 600;
@@ -80,134 +85,7 @@ blue #779ecc
     text-align: center;
     
 }
-/*Under 1200px*/
-@media (max-width: 1200px) {
-  .title{
-      display: flex;
-      align-items:center;
-      justify-content: center;
-      text-align: center;
-      min-height:55px;
-      min-width: 230px;
-      max-width: 110px;
-      min-height: 200px;
-      color:#ffB347;
-      font-size: 42px;
-      font-weight: 600;
-      padding: 5px;
-    
-  }
-  .name{
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    min-height:55px;
-    min-width: 150px;
-    max-width: 110px;
-    min-height: 200px;
-      background-color: black;
-      color: white;
-      font-weight: 600;
-      
-      text-align: center;
-      font-size: 48px;
-  }
-  .moves{
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    min-height:55px;
-    min-width: 150px;
-    max-width: 110px;
-    min-height: 200px;
-      background-color: black;
-      color: white;
-      font-weight: 600;
-      text-align: center;
-      font-size: 48px;
-  }
-  .clock {
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    min-height:55px;
-    min-width: 150px;
-    max-width: 110px;
-    min-height: 200px;
-      background-color: black;
-      color: white;
-      font-weight: 600;
-      font-size: 48px;
-      text-align: center;
-      
-  }
 
-
-}
-/*Under 450px for Mobile*/
-@media (max-width: 450px) {
-  .title{
-      display: flex;
-      align-items:center;
-      justify-content: center;
-      text-align: center;
-      min-height:55px;
-      min-width: 230px;
-      max-width: 110px;
-      min-height: 200px;
-      color:#ffB347;
-      font-size: 42px;
-      font-weight: 600;
-      padding: 5px;
-    
-  }
-  .name{
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    min-height:55px;
-    min-width: 150px;
-    max-width: 110px;
-    min-height: 200px;
-      background-color: black;
-      color: white;
-      font-weight: 600;
-      
-      text-align: center;
-      font-size: 48px;
-  }
-  .moves{
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    min-height:55px;
-    min-width: 150px;
-    max-width: 110px;
-    min-height: 200px;
-      background-color: black;
-      color: white;
-      font-weight: 600;
-      text-align: center;
-      font-size: 48px;
-  }
-  .clock {
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    min-height:55px;
-    min-width: 150px;
-    max-width: 110px;
-    min-height: 200px;
-      background-color: black;
-      color: white;
-      font-weight: 600;
-      font-size: 48px;
-      text-align: center;
-      
-  }
-
-
-}
 /*Modal*/
 #openModal{
     

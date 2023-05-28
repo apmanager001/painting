@@ -3,11 +3,18 @@
     <title>Where Community Meets Art</title>
     <link rel="stylesheet" href="css/style.css">
     <script>
-    $(window).on('load resize',function(){
-        if($(window).width() < 450){
-            window.location = "https://www.google.com"
+    function redirectToMobile() {
+        if(screen.width < 450) {
+            window.location = 'mobile/mobile.html';
         }
-      });
+    }
+    
+window.onload = redirectToMobile();  
+
+window.onload = redirectMobileHandler();
+window.onresize = () => redirectMobileHandler();
+
+
       document.addEventListener('DOMContentLoaded', function() {
     var faqBox = document.querySelector('.rules');
     var rulesLink = document.getElementById('rules-link');
