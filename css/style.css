@@ -2,68 +2,147 @@ body{
     margin: 0;
     padding: 0;
     border: 0;
-    background-color: #000328;
+    background-color: #9fc0de;
 }
+
+/*
+colors 
+light blue #9fc0de
+light orange #ffB347
+blue #779ecc
+*/
 /* The top head of the page*/
 .container-header {
     margin: 0;
-    background-color: #000328;
-    height: 84px;
-    display: flex;
-    padding: 15px;
+    background-color: #779ecc;
+    
 }
-.center {
-    display: flex;
-    align-items:center;
-    justify-content: center;
-}
-.right {
+.header{
   display: flex;
   align-items:center;
-  justify-content: right;
+  justify-content: center;
+  padding: 15px;
 }
+
 .title{
     display: flex;
     align-items:center;
     justify-content: center;
-    color:aqua;
-    font-size: 48px;
-    text-align: justify;
-    padding-right: 30px;
+    color:#ffB347;
+    font-size: 42px;
+    font-weight: 600;
+    padding: 5px;
   
 }
 .mid-header{
-    padding: 15px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  padding: 5px;
 }
 .name{
-    height:50px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+    min-height:55px;
     width: 150px;
     background-color: black;
     color: white;
     font-weight: 600;
-    margin-right: 15px;
+    
     text-align: center;
     font-size: 48px;
 }
 .moves{
-    height:50px;
-    width: 350px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  min-height:55px;
+  min-width: 350px;
     background-color: black;
     color: white;
     font-weight: 600;
-    margin-right: 15px;
+    
     text-align: center;
     font-size: 48px;
 }
+
 .clock {
-    height:50px;
-    width: 275px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+    min-height:55px;
+    min-width: 180px;
     background-color: black;
     color: white;
     font-weight: 600;
     font-size: 48px;
     text-align: center;
-    margin-right: 15px;
+    
+}
+/*Under 1200px*/
+@media (max-width: 1200px) {
+  .title{
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      text-align: center;
+      min-height:55px;
+      min-width: 215px;
+      max-width: 110px;
+      min-height: 200px;
+      color:#ffB347;
+      font-size: 42px;
+      font-weight: 600;
+      padding: 5px;
+    
+  }
+  .name{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    min-height:55px;
+    min-width: 150px;
+    max-width: 110px;
+    min-height: 200px;
+      background-color: black;
+      color: white;
+      font-weight: 600;
+      
+      text-align: center;
+      font-size: 48px;
+  }
+  .moves{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    min-height:55px;
+    min-width: 150px;
+    max-width: 110px;
+    min-height: 200px;
+      background-color: black;
+      color: white;
+      font-weight: 600;
+      text-align: center;
+      font-size: 48px;
+  }
+  .clock {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    min-height:55px;
+    min-width: 150px;
+    max-width: 110px;
+    min-height: 200px;
+      background-color: black;
+      color: white;
+      font-weight: 600;
+      font-size: 48px;
+      text-align: center;
+      
+  }
+
+
 }
 /*Modal*/
 #openModal{
@@ -128,10 +207,12 @@ body{
 .rules {
   display: none;
   background-color: white;
+  color: black;
+  font-size: 24px;
   padding: 20px;
   position: absolute;
   top: 40%;
-  left: 35%;
+  left: 40%;
   width: 25%;
   z-index: 1;
 }
@@ -139,20 +220,22 @@ body{
 #rules-link {
     position: relative;
     color: white;
-    font-size: 48px;
+    font-size: 24px;
     font-weight: 600;
     text-decoration: none;
     }
-/* the part of the page that is used, staging and shapes*/
+/* the part of the page that is used, staging and colors*/
 .container{
-    padding: 30px 0 0 30px;
+    padding: 30px 0 30px 0;
     display: flex;
-    margin-bottom: 5%;
+    align-items:center;
+    justify-content: center;
+    
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(135, 1fr); /* Adjust the number of columns here */
-  grid-template-rows: repeat(60, 1fr); /* Adjust the number of rows here */
+  grid-template-columns: repeat(85, 1fr); /* Adjust the number of columns here */
+  grid-template-rows: repeat(65, 1fr); /* Adjust the number of rows here */
   gap: 0px; /* Adjust the gap between squares here */
   background-color: navy;
   padding: 2px;
@@ -161,8 +244,8 @@ body{
 .square {
   background-color: #ccc;
   border: 1px solid #777;
-  height: 8px;
-  width: 8px;
+  height: 10px;
+  width: 10px;
 }
 .color1 {
   background-color: #ff0000;

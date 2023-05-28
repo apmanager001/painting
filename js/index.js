@@ -24,9 +24,9 @@ var clickedSquares = new Set();
 // set how many moves can be made
 const moves = 20
 // set grid number of Rows
-const totalRows = 135
+const totalRows = 85
 //set grid number of Columns
-const totalColumns = 60
+const totalColumns = 65
 
 function changeColor(event) {
   const square = event.target;
