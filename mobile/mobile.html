@@ -3,6 +3,14 @@
     <title>Where Community Meets Art</title>
     <link rel="stylesheet" href="mobile.css">
     <script>
+    //mobile redirect
+    function redirectToMobile() {
+        if(screen.width > 450) {
+            window.location = '../index.html';
+        }
+    }
+    window.onload = redirectToMobile();  
+    //Modal for rules
       document.addEventListener('DOMContentLoaded', function() {
   var faqBox = document.querySelector('.rules');
   var rulesLink = document.getElementById('rules-link');

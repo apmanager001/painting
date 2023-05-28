@@ -149,12 +149,12 @@ blue #779ecc
   display: none;
   background-color: white;
   color: black;
-  font-size: 24px;
+  font-size: 36px;
   padding: 20px;
   position: absolute;
   top: 40%;
-  left: 40%;
-  width: 25%;
+  left: 25%;
+  width: 50%;
   z-index: 1;
 }
 

@@ -3,6 +3,7 @@
     <title>Where Community Meets Art</title>
     <link rel="stylesheet" href="css/style.css">
     <script>
+      //redirect for mobile under 450px
     function redirectToMobile() {
         if(screen.width < 450) {
             window.location = 'mobile/mobile.html';
@@ -10,11 +11,7 @@
     }
     
 window.onload = redirectToMobile();  
-
-window.onload = redirectMobileHandler();
-window.onresize = () => redirectMobileHandler();
-
-
+// modal for rules
       document.addEventListener('DOMContentLoaded', function() {
     var faqBox = document.querySelector('.rules');
     var rulesLink = document.getElementById('rules-link');
