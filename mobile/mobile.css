@@ -176,7 +176,7 @@ blue #779ecc
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(17.5, 1fr); /* Adjust the number of columns here */
+  grid-template-columns: repeat(18, 1fr); /* Adjust the number of columns here */
   grid-template-rows: repeat(30, 1fr); /* Adjust the number of rows here */
   gap: 0px; /* Adjust the gap between squares here */
   background-color: #779ecc;

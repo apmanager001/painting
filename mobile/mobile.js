@@ -24,7 +24,7 @@ var clickedSquares = new Set();
 // set how many moves can be made
 const moves = 20
 // set grid number of Rows
-const totalRows = 17.5
+const totalRows = 18
 //set grid number of Columns
 const totalColumns = 30
 
