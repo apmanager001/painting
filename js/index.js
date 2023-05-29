@@ -49,15 +49,17 @@ function changeColor(event) {
   if (count <= 0) {
     // Perform necessary actions when count reaches max moves
     document.getElementById('counter').textContent = 'Out of Moves';
-    disableColorChanges();
+    disableColorChanges(true);
   }
   console.log(clickedSquares)
 }
 // once all 20 moves are made this function stops color changes
-function disableColorChanges() {
+function disableColorChanges(disableAddition = true) {
   const squares = document.querySelectorAll('.square');
   squares.forEach((square) => {
-    square.removeEventListener('click', changeColor);
+    if (!clickedSquares.has(square)) {
+      square.removeEventListener('click', changeColor);
+    }
   });
 }
 
