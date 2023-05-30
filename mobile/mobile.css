@@ -23,35 +23,36 @@ blue #779ecc
   align-items:center;
   justify-content: center;
   grid-template-columns: 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  background-color: black;
 }
 
 .title{
-    grid-column: 1/ 2;
-    grid-row: 1 /2;
     display: flex;
     align-items:center;
     justify-content: center;
     color:#ffB347;
-    height: 55px;
-    font-size: 56px;
+    font-size: 100px;
     font-weight: 600;
     padding: 5px;
   
 }
 .mid-header{
-    display: grid;
+  display: grid;
   align-items:center;
   justify-content: center;
 }
+.mid-header button{
+  margin: 15px 0 15px 0;
+}
 .name{
     grid-column: 1/ 2;
-    grid-row: 2/3;
+    grid-row: 1/2;
     display: flex;
     align-items:center;
     justify-content: center;
-    height: 55px;
-    background-color: black;
+    
+    
     color: white;
     font-weight: 600;
     text-align: center;
@@ -59,12 +60,12 @@ blue #779ecc
 }
 .moves{
     grid-column: 1/ 2;
-    grid-row: 3 /4;
+    grid-row: 2 /3;
     display: flex;
     align-items:center;
     justify-content: center;
-    background-color: black;
-    height: 55px;
+    
+    
     color: white;
     font-weight: 600;
     text-align: center;
@@ -73,12 +74,12 @@ blue #779ecc
 
 .clock {
     grid-column: 1/ 2;
-    grid-row: 4 /5;
+    grid-row: 3/4;
     display: flex;
     align-items:center;
     justify-content: center;
-    height: 55px;
-    background-color: black;
+    
+    
     color: white;
     font-weight: 600;
     font-size: 48px;
