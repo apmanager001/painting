@@ -1,4 +1,4 @@
-// MODAL
+/* MODAL
 const openModalBtn = document.getElementById("openModal");
 const modal = document.getElementById("myModal");
 const closeModalBtn = document.getElementsByClassName("close")[0];
@@ -19,7 +19,7 @@ usernameForm.addEventListener("submit", function(event) {
   console.log("Username submitted:", username);
   modal.style.display = "none";
 });
-//end modal
+end modal*/
 var clickedSquares = new Set();
 // set how many moves can be made
 const moves = 20
@@ -54,14 +54,14 @@ function changeColor(event) {
   console.log(clickedSquares)
 }
 // once all 20 moves are made this function stops color changes
-function disableColorChanges(disableAddition = true) {
-  const squares = document.querySelectorAll('.square');
-  squares.forEach((square) => {
-    if (!clickedSquares.has(square)) {
-      square.removeEventListener('click', changeColor);
-    }
-  });
-}
+//function disableColorChanges(disableAddition = true) {
+// const squares = document.querySelectorAll('.square');
+//  squares.forEach((square) => {
+//    if (!clickedSquares.has(square)) {
+//      square.removeEventListener('click', changeColor);
+//    }
+//  });
+//}
 
 //creates divs for the grid
 function createGrid() {
@@ -100,3 +100,61 @@ function startCountdownTimer() {
 
 // Call the function to create the grid
 createGrid();
+
+// changes
+const {Client} =require('pg')
+
+const client = new Client({
+    host: "localhost",
+    user: "postgres",
+    port: 5432,
+    password: "postgres",
+    database: "canvas"
+})
+
+
+client.connect((err) => {
+  if (err) throw err;
+  console.log('Connected to the database!');
+});
+
+
+
+function disableColorChanges(disableAddition = true) {
+  const squares = document.querySelectorAll('.square');
+  squares.forEach((square) => {
+    if (!clickedSquares.has(square)) {
+      square.removeEventListener('click', changeColor);
+    }
+  });
+
+  // Convert clickedSquares set to an array
+  const clickedSquaresArray = Array.from(clickedSquares);
+
+  // Prepare the data for insertion into the database
+  const data = clickedSquaresArray.map((square) => ({
+    squareId: square.id,
+    colorIndex: square.dataset.colorIndex,
+  }));
+
+  // Insert the data into the database
+  const query = 'INSERT INTO canvas (square, color) VALUES ($1, $2)';
+data.forEach((item) => {
+  client.query(query, [item.squareId, item.colorIndex], (err, result) => {
+    if (err) throw err;
+    console.log('Data inserted into the database!');
+  });
+});
+}
+
+
+connection.end((err) => {
+  if (err) throw err;
+  console.log('Disconnected from the database!');
+});
+
+
+
+
+
+
